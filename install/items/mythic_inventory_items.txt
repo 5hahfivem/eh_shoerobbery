@@ -1,0 +1,18 @@
+-- Add this entry to your Mythic Inventory item source, e.g. _itemsSource["misc"].
+-- Metadata from eh_shoerobbery (tier/value/etc.) is attached when the item is awarded.
+
+{
+    name = "shoebox",
+    label = "Shoe Box",
+    description = "A shoe box that may contain valuable sneakers.",
+    price = 0,
+    isUsable = false,
+    isRemoved = false,
+    isStackable = 100,
+    isDestroyed = false,
+    type = 5, -- collectable
+    rarity = 1, -- common
+    closeUi = false,
+    metalic = false,
+    weight = 1,
+},

@@ -1,0 +1,12 @@
+-- Add this entry to ox_inventory/data/items.lua
+-- Supports metadata from eh_shoerobbery (label, description, tier, value).
+
+return {
+    ['shoebox'] = {
+        label = 'Shoe Box',
+        description = 'A shoe box that may contain valuable sneakers.',
+        weight = 250,
+        stack = true,
+        close = true
+    }
+}

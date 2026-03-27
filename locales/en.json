@@ -1,0 +1,30 @@
+{
+    "help": {
+        "smash_register": "Smash the register",
+        "need_bat": "Equip a bat to smash the register",
+        "search_box": "Search shoe box"
+    },
+    "progress": {
+        "smashing_register": "Smashing register...",
+        "searching_box": "Searching shoe box..."
+    },
+    "error": {
+        "need_bat": "You need a bat in your hand.",
+        "cancelled": "Action cancelled.",
+        "register_on_cooldown": "This register has already been hit recently.",
+        "shop_on_cooldown": "This shop was robbed recently. Try again in %s minutes.",
+        "not_enough_police": "Not enough police on duty. Required: %s",
+        "smash_register_first": "Smash the register first.",
+        "box_already_searched": "That shoe box was already searched.",
+        "no_access": "You are not authorized to search this store anymore.",
+        "invalid_search": "This search is no longer valid.",
+        "item_failed": "Could not carry the shoe box item."
+    },
+    "success": {
+        "register_cash": "You stole $%s from the register.",
+        "box_loot": "You found %s (value: $%s)."
+    },
+    "inform": {
+        "empty_box": "The shoe box is empty."
+    }
+}

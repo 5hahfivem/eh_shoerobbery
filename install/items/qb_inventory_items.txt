@@ -1,0 +1,15 @@
+-- Add this entry to qb-core/shared/items.lua (or your items export file).
+-- Metadata passed from eh_shoerobbery is stored in item info.
+
+['shoebox'] = {
+    ['name'] = 'shoebox',
+    ['label'] = 'Shoe Box',
+    ['weight'] = 250,
+    ['type'] = 'item',
+    ['image'] = 'shoebox.png',
+    ['unique'] = false,
+    ['useable'] = false,
+    ['shouldClose'] = true,
+    ['combinable'] = nil,
+    ['description'] = 'A shoe box that may contain valuable sneakers.'
+},
