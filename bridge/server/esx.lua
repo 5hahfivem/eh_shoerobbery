@@ -26,6 +26,31 @@ function GiveItem(source, item, amount, metadata)
     return true
 end
 
+function GetItemCount(source, item)
+    if GetResourceState("ox_inventory") == "started" then
+        return exports.ox_inventory:GetItemCount(source, item) or 0
+    end
+
+    local player = GetPlayer(source)
+    if not player or not player.getInventoryItem then return 0 end
+    local invItem = player.getInventoryItem(item)
+    return (invItem and invItem.count) or 0
+end
+
+function RemoveItem(source, item, amount)
+    amount = amount or 1
+    if amount <= 0 then return false end
+
+    if GetResourceState("ox_inventory") == "started" then
+        return exports.ox_inventory:RemoveItem(source, item, amount)
+    end
+
+    local player = GetPlayer(source)
+    if not player or not player.removeInventoryItem then return false end
+    player.removeInventoryItem(item, amount)
+    return true
+end
+
 function GetPoliceCount()
     local players = ESX.GetPlayers()
     local count = 0

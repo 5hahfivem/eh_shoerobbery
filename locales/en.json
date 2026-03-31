@@ -18,11 +18,16 @@
         "box_already_searched": "That shoe box was already searched.",
         "no_access": "You are not authorized to search this store anymore.",
         "invalid_search": "This search is no longer valid.",
-        "item_failed": "Could not carry the shoe box item."
+        "item_failed": "Could not carry the shoe box item.",
+        "sell_unavailable": "Sell shop is currently unavailable.",
+        "only_shoebox_sell": "Only shoe boxes can be sold here.",
+        "shoebox_no_value": "This shoe box has no resale value.",
+        "no_shoebox_to_sell": "You have no shoe boxes to sell."
     },
     "success": {
         "register_cash": "You stole $%s from the register.",
-        "box_loot": "You found %s (value: $%s)."
+        "box_loot": "You found %s (value: $%s).",
+        "sold_shoebox": "Sold %sx shoe box(es) for $%s."
     },
     "inform": {
         "empty_box": "The shoe box is empty."

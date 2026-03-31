@@ -11,6 +11,7 @@ ox_lib 'locale'
 shared_scripts {
     '@ox_lib/init.lua',
     'shared/config.lua',
+    'shared/peds.lua',
     'shared/locale.lua',
     'bridge/framework.lua'
 }
@@ -21,12 +22,14 @@ client_scripts {
     'bridge/client/qb.lua',
     'bridge/client/qbox.lua',
     'bridge/client/mythic.lua',
+    'client/pedmanager.lua',
     'client/main.lua'
 }
 server_scripts {
     'bridge/server/esx.lua',
     'bridge/server/qb.lua',
     'bridge/server/qbox.lua',
+    'bridge/server/mythic.lua',
     'server/main.lua'
 }
 

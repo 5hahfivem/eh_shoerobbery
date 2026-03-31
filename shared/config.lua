@@ -39,6 +39,27 @@ return {
     },
 
     ShoeLootItem = "shoebox",
+    SellShop = {
+        enabled = true,
+        oxOnlyStash = true, -- when true: stash drag-to-sell only runs with ox_inventory
+        fallbackDirectSell = true, -- when not using ox_inventory: sell all shoebox directly on ped interact
+        fallbackUnitPrice = 350, -- simple per-box fallback payout used by fallbackDirectSell
+        reason = "shoe_box_sell",
+        payoutAccount = "cash", -- cash | bank | money
+        stash = {
+            id = "eh_shoerobbery_sell",
+            label = "Shoe Buyback",
+            slots = 1,
+            maxWeight = 9000000
+        },
+        ped = {
+            -- Config example for the sell ped
+            model = "u_m_y_zombie_01",
+            coords = vec4(425.71, -807.11, 29.49, 87.63),
+            renderDistance = 12.0,
+            scenario = "WORLD_HUMAN_CLIPBOARD"
+        }
+    },
     ShoeLoot = {
         { chance = 10, type = "rare", amount = 1, value = { min = 1800, max = 3200 }, metadata = { label = "Nike Air Yeezy 2 Red October", description = "Rare collectible sneakers." } },
         { chance = 20, type = "mid", amount = 1, value = { min = 700, max = 1400 }, metadata = { label = "Jordan 4 Retro", description = "Popular sneaker pair in good condition." } },

@@ -28,6 +28,30 @@ function GiveItem(source, item, amount, metadata)
     return false
 end
 
+function GetItemCount(source, item)
+    if GetResourceState("ox_inventory") == "started" then
+        return exports.ox_inventory:GetItemCount(source, item) or 0
+    end
+
+    local player = GetPlayer(source)
+    if not player or not player.Functions or not player.Functions.GetItemByName then return 0 end
+    local invItem = player.Functions.GetItemByName(item)
+    return (invItem and invItem.amount) or 0
+end
+
+function RemoveItem(source, item, amount)
+    amount = amount or 1
+    if amount <= 0 then return false end
+
+    if GetResourceState("ox_inventory") == "started" then
+        return exports.ox_inventory:RemoveItem(source, item, amount)
+    end
+
+    local player = GetPlayer(source)
+    if not player or not player.Functions or not player.Functions.RemoveItem then return false end
+    return player.Functions.RemoveItem(item, amount)
+end
+
 function GetPoliceCount()
     if not QBCore then return 0 end
     local players = QBCore.Functions.GetPlayers()
